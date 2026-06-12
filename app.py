@@ -225,7 +225,7 @@ if analyze:
                 
                 result_text = response.text
                 result_text = result_text.replace("```json", "").replace("
-```", "").strip()
+(```", "").strip()
                 data = json.loads(result_text)
                 
                 st.session_state.hasil_gizi_v2 = data
