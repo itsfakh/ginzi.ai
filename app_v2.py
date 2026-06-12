@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 # ==================================
 # PAGE CONFIG & CSS
 # ==================================
-st.set_page_config(page_title="CekGizi AI Pro", page_icon="🥗", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Ginzi Pro", page_icon="🥗", layout="wide", initial_sidebar_state="expanded")
 
 st.markdown("""
 <style>
