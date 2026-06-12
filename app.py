@@ -223,7 +223,7 @@ if analyze:
                     contents=[prompt, proses_image]
                 )
                 
-result_text = response.text
+            result_text = response.text
                 result_text = result_text.replace("```json", "").replace("```", "").strip()
                 data = json.loads(result_text)
                 
