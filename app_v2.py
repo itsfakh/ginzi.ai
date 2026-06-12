@@ -160,7 +160,13 @@ if st.button("🔍 Analisis Nutrisi"):
                 st.rerun()
                 
             except Exception as e:
-                st.error(f"❌ Terjadi kesalahan saat memproses: {e}")
+                error_text = str(e)
+                if "429" in error_text:
+                    st.markdown('<div style="background-color: #fff3cd; color: #000000; padding: 15px; border-radius: 10px; font-weight: bold; border: 1px solid #ffe69c;">⚠️ Kuota sedang beristirahat. Silakan tunggu 1 menit lalu coba lagi.</div>', unsafe_allow_html=True)
+                elif "503" in error_text:
+                    st.markdown('<div style="background-color: #fff3cd; color: #000000; padding: 15px; border-radius: 10px; font-weight: bold; border: 1px solid #ffe69c;">⏳ Server AI sedang penuh antrean. Silakan tunggu beberapa detik dan klik Analisis lagi!</div>', unsafe_allow_html=True)
+                else:
+                    st.markdown(f'<div style="background-color: #f8d7da; color: #000000; padding: 15px; border-radius: 10px; font-weight: bold; border: 1px solid #f5c6cb;">❌ Gagal memproses: {e}</div>', unsafe_allow_html=True)
     else:
         st.warning("⚠️ Silakan unggah atau ambil foto makanan terlebih dahulu!")
 
