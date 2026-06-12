@@ -45,7 +45,7 @@ try:
     client_gs = gspread.authorize(creds)
     
     # PERHATIAN: Pastikan nama ini sama persis dengan nama file Google Sheets kamu
-    sheet = client_gs.open("Database CekGizi").sheet1 
+    sheet = client_gs.open("Database Ginzi.AI").sheet1 
 except Exception as e:
     st.error(f"⚠️ Gagal terhubung ke Google Sheets. Pastikan kuncinya benar dan email robot sudah di-share sebagai Editor. Error: {e}")
     st.stop()
