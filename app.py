@@ -217,9 +217,9 @@ if analyze:
             """
             
             try:
-                # Menggunakan 1.5-flash agar lebih kebal dari antrean server (Error 503)
+                # Menggunakan 2.5-flash agar lebih kebal dari antrean server (Error 503)
                 response = client.models.generate_content(
-                    model="gemini-1.5-flash",
+                    model="gemini-2.5-flash",
                     contents=[prompt, proses_image]
                 )
                 
