@@ -223,9 +223,8 @@ if analyze:
                     contents=[prompt, proses_image]
                 )
                 
-                result_text = response.text
-                result_text = result_text.replace("```json", "").replace("
-(```", "").strip()
+result_text = response.text
+                result_text = result_text.replace("```json", "").replace("```", "").strip()
                 data = json.loads(result_text)
                 
                 st.session_state.hasil_gizi_v2 = data
