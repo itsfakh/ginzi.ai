@@ -89,7 +89,7 @@ st.sidebar.markdown(f"""
 # ==================================
 # HEADER & SISA KALORI
 # ==================================
-st.markdown('<div class="hero"><h1>🥗 CekGizi AI Pro</h1><p style="font-size:18px;">Asisten Diet Cerdas dengan Database</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="hero"><h1>🥗 Ginzi AI </h1><p style="font-size:18px;">Asisten Diet Cerdas dengan Database</p></div>', unsafe_allow_html=True)
 st.info("💡 **Tips untuk pengguna HP:** Buka menu dengan menekan tanda panah 👈 di pojok kiri atas untuk mengatur profilmu!")
 
 total_dimakan = sum([item["kalori"] for item in st.session_state.riwayat_makanan])
