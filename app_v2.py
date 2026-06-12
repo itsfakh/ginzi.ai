@@ -138,7 +138,7 @@ if st.button("🔍 Analisis Nutrisi"):
             """
             
             try:
-                response = client.models.generate_content(model="gemini-1.5-flash", contents=[prompt, proses_image])
+                response = client.models.generate_content(model="gemini-2.5-flash", contents=[prompt, proses_image])
                 result_text = response.text.replace("```json", "").replace("```", "").strip()
                 data = json.loads(result_text)
                 
